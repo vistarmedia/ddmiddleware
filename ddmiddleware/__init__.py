@@ -6,7 +6,7 @@ from traceback import format_tb
 from dogapi.http import DogHttpApi
 
 
-class DatadogMiddleware:
+class DatadogMiddleware(object):
   def __init__(self, app, **kwargs):
     self.app = app
     if 'api_key' not in kwargs or 'application_key' not in kwargs:
